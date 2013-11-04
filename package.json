@@ -1,0 +1,36 @@
+{
+  "name": "validity-url-optional-tlds",
+  "version": "0.1.0",
+  "description": "Validity style validator which extends url to allow for non-tld urls",
+  "main": "validator.js",
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/validity-url-optional-tlds"
+  },
+  "keywords": [
+    "validity",
+    "validation",
+    "url",
+    "tlds"
+  ],
+  "author": "James Mortemore <jamesmortemore@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/confuser/validity-url-optional-tlds/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "istanbul": "~0.1.44",
+    "async": "~0.2.9",
+    "should": "2"
+  }
+}
