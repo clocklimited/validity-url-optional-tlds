@@ -32,7 +32,7 @@ describe('URL Validation', function() {
     async.each(urls, function (value, cb) {
       validate('url', 'url', { url: value }, function (err, errMessage) {
         if (err) return cb(err)
-        should.not.exist(errMessage)
+        should.not.exist(errMessage, 'Should be valid: ' + value)
 
         cb(err)
       })
@@ -43,7 +43,7 @@ describe('URL Validation', function() {
   })
 
   it('should correctly return false for invaild URLs', function (done) {
-    var urls = 
+    var urls =
     [ 'google.com'
     , 'sfsdfsd'
     , 'http://'
@@ -62,7 +62,7 @@ describe('URL Validation', function() {
     async.each(urls, function(value, cb) {
       validate('url', 'url', { url: value }, function (err, errMessage) {
         if (err) return cb(err)
-        
+        should.ok(errMessage, 'This is considered a value URL ' + value)
         errMessage.should.equal('url must be a valid URL')
 
         cb(err)
