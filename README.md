@@ -1,5 +1,7 @@
 # validity-url-optional-tlds
 
+[![Build Status](https://travis-ci.org/confuser/validity-url-optional-tlds.png?branch=master)](https://travis-ci.org/confuser/validity-url-optional-tlds)
+
 Validity style validator which extends url to allow for non-tld urls.
 
 ## Installation
